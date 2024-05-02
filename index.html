@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICT Seatwork 2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <style>
+        .container {
+            text-align: center;
+        }
+        input {
+            width: 500px;
+            height: 75px;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculator</h1>
+        <br>
+        <br>
+        <h2>Given:</h2>
+        <br>
+        <h3>Enter a value for x:</h3>
+        <input id="number-x" type="number">
+        <br>
+        <br>
+        <h3>Enter a value for y:</h3>
+        <input id="number-y" type="number">
+    </div>
+    <br>
+    <br>
+    <div class="container">
+        <button onclick="product()">product of x and y</button>
+        <button onclick="power()">x raised to y</button>
+        <br>
+        <button onclick="remainder()">get the remainder</button>
+        <button onclick="equal()">check if x is equal to y</button>
+    </div>
+    <script>
+        function product()
+        {
+            let x = document.getElementById("number-x").value
+            let y = document.getElementById("number-y").value
+            let z = x * y
+            window.alert("The product of X and Y is " + z)
+        }
+        function power()
+        {
+            let x = document.getElementById("number-x").value
+            let y = document.getElementById("number-y").value
+            let z = Math.pow(x, y)
+            window.alert("X raised by the power of Y is " + z)
+        }
+        function remainder()
+        {
+            let x = document.getElementById("number-x").value
+            let y = document.getElementById("number-y").value
+            let z = x % y
+            window.alert("The remainder of X and Y is " + z)
+        }
+        function equal()
+        {
+            let x = document.getElementById("number-x").value
+            let y = document.getElementById("number-y").value
+            let z = x == y
+            window.alert("Is X equal to Y? The answer is " + z)
+        }
+    </script>
+</body>
+</html>
