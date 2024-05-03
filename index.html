@@ -15,30 +15,45 @@
             height: 75px;
             font-size: 50px;
         }
+        body {
+            color: white;
+            background-color: black;
+        }
+        button {
+            width: 500px;
+            margin: 10px;
+        }
+        
     </style>
 </head>
 <body>
+    <br>
+    <center><h1>Calculator</h1></center>
+    <br>
     <div class="container">
-        <h1>Calculator</h1>
-        <br>
-        <br>
-        <h2>Given:</h2>
-        <br>
-        <h3>Enter a value for x:</h3>
-        <input id="number-x" type="number">
-        <br>
-        <br>
-        <h3>Enter a value for y:</h3>
-        <input id="number-y" type="number">
+        <div class="row">
+            <div class="col-xl-6 container">
+                <h2>Given:</h2>
+                <br>
+                <h3>Enter a value for x:</h3>
+                <input id="number-x" type="number">
+                <br>
+                <br>
+                <h3>Enter a value for y:</h3>
+                <input id="number-y" type="number">
+            </div>
+            <div class="col-xl-6 container">
+               <img src="https://news.harvard.edu/wp-content/uploads/2022/11/iStock-mathproblems.jpg" alt="" width="500px">
+            </div>
+        </div>
     </div>
-    <br>
-    <br>
+    <br><br><br>
     <div class="container">
-        <button onclick="product()">product of x and y</button>
-        <button onclick="power()">x raised to y</button>
-        <br>
-        <button onclick="remainder()">get the remainder</button>
-        <button onclick="equal()">check if x is equal to y</button>
+        <button onclick="product()" class="btn btn-warning">product of x and y</button>
+        <button onclick="power()" class="btn btn-warning">x raised to y</button>
+        <button onclick="remainder()" class="btn btn-warning">get the remainder</button>
+        <button onclick="equal()" class="btn btn-warning">check if x is equal to y</button>
+
     </div>
     <script>
         function product()
@@ -52,7 +67,7 @@
         {
             let x = document.getElementById("number-x").value
             let y = document.getElementById("number-y").value
-            let z = Math.pow(x, y)
+            let z = x ** y
             window.alert("X raised by the power of Y is " + z)
         }
         function remainder()
